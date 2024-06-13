@@ -1,35 +1,14 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import Heading from './heading';
+import List from './List';
 
-const customStyle = {
-  color: ""
-};
-
-var greetings = () => {
-const time = new Date().getHours();
-let greet =""
-
-
-
-if (time <12) {
-  greet = "Good morning";
-  customStyle.color = "green";
-}
-else if ( time <18 ){
-  greet = " Good Afternoon!";
-  customStyle.color = "orange"
-}
-else {
-  greet = "Good night!";
-  customStyle.color = "red"
-}
-
-return greet
-};
 function App() {
   return (
     <div>
-     <h1 style={customStyle}> {greetings()}!</h1>
+   <Heading />
+   <List />
     </div>
   );
 }
